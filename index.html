@@ -1,9 +1,436 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  
+  <title>The Edge of Code</title>
+  <meta name="author" content="Ryan Edge">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="The Edge of Code"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <meta http-equiv="Content-Language" content="en"/>
+  
+
+  <link href="/img/favicon.png" rel="icon">
+  
+    <link rel="apple-touch-icon" href="/img/apple-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-icon.png">
+    
+
+  <link rel="alternate" href="/atom.xml" title="The Edge of Code" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+  <style type="text/css">
+  /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
+body{ -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+  
+
+  
+    article .post-content-index .entry{max-height: 550px; overflow:hidden;}
+  
+</style>
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'null', 'auto');
+  ga('send', 'pageview');
+ 
+</script>
+
+
+
+
+  
+    
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
+    
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+
+  
+
+
+
+</head>
+
 
 <body>
-	<h1>Hello World</h1>
-	<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <header id="header" class="inner"><div class="padding">
+	<div class="alignleft logo">
+	  <h1><a href="/">The Edge of Code</a></h1>
+	</div>
+	<nav id="main-nav" class="alignright">
+		<input type="checkbox" id="toggle" />
+		<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick><i class="fa fa-bars"></i></label>
+	  <ul class="menu">
+	    
+	      <li><a href="/">Home</a></li>
+	    
+	      <li><a href="/archives">Archives</a></li>
+	    
+	    
+	  </ul>
+	</nav>
+	<div class="clearfix"></div>
+</div>
+</header>
+  <div id="page-heading-wrap">
+  	<div class="inner">
+      <div class="padding">
+    		
+          <h2>JavaScript, .NET, &amp; Other Stuff</h2>
+        
+      </div>
+  	</div>
+  </div>
 
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper" class="padding">
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2015/10/01/hybrid-apps/">Don&#39;t Go Hybrid, Go Cross-Platform</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2015-10-01T22:25:00.000Z">2015-10-01</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">Ryan Edge</a>
+                
+
+              </li>
+            
+            <!-- <li>
+              <span class="heading-span">With: </span>
+               -->
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <h1 id="Adaptive_UI">Adaptive UI</h1><p>How surprised would you be if your favorite app wasn’t native? Better yet, how surprised would you be if your favorite app was the exact same code, running on multiple platforms with just a few minor differences? <br><br>This capability captures the essence of <a href="https://en.wikipedia.org/wiki/Adaptive_user_interface" target="_blank" rel="external">Adaptive UI</a>: As the orientation and size of your device change, so do its layout and elements to accommodate the needs of the user in that context. As you might surmise, the cost of implementing this type of design natively is high, and that’s why hybrid apps have such an appeal.</p>
+<h1 id="What_is_a_hybrid_app_exactly?">What is a hybrid app exactly?</h1><p>A hybrid app is basically an app that uses HTML, CSS, and JavaScript while running natively on a mobile platform. This can be done by either using the internal browser (WebView) of the mobile operating system, or by compiling the code into native code for each platform. The benefits of such apps are obvious: one code base for multiple platforms, reduced development time &amp; cost, and easy design implementation across devices. These benifits come at a dwindling cost that arguably now only amounts to performance issues (mostly where games are concerned) and a loss of native look and feel (which contradicts the Adaptive UI principles that every major mobile OS have adopted). <br><br>Hybrid apps stop short in the mobile/web sphere, and because of that have given an old term new life: cross-platform apps. While hybrid apps do lip service to the “one code base - multiple platforms” mantra, cross-platform apps make it their mission by using multiple technologies to target every operating system on every type of device. They rely on some of the same technologies as hybrid apps and then some.<br><br>Here’s a list of some of the best apps that share a universal code base, but run on multiple platforms</p>
+<h1 id="Build_Once,_Run_Everywhere">Build Once, Run Everywhere</h1><p>These apps are the top of the cross-platform food chain, in that they target everyone everywhere. This is a short list with some heavy hitters. Apps in this category target the web, the desktop, and mobile. These heavy hitters adhere heavily to Adaptive UI principles across devices.</p>
+<h2 id="The_List">The List</h2><ul>
+<li><a href="https://slack.com/" target="_blank" rel="external">Slack</a> - Only everyone’s favorite team chat app. (PC, Mac, Linux, iOS, Android, Windows Phone, and Web)</li>
+<li><a href="https://evernote.com" target="_blank" rel="external">Netflix</a> - No explanation needed (PC, Mac, iOS, Android, Windows Phone, Web)</li>
+<li><a href="https://www.wunderlist.com/" target="_blank" rel="external">Wunderlist</a> - One of the top to-do list apps since its inception. (PC, Mac, iOS, Android, Windows Phone, and Web)</li>
+<li><a href="https://evernote.com" target="_blank" rel="external">Evernote</a> - Pretty much where note taking starts and ends (PC, Mac, iOS, Android, Windows Phone, Web)</li>
+<li><a href="https://telegram.org/" target="_blank" rel="external">Telegram</a> - An open source secure messaging platform. (PC, Mac, Linux, iOS, Android, Windows Phone, and Web)</li>
+<li><a href="http://www.typetalk.in/" target="_blank" rel="external">Typetalk</a> - Never heard of them, but a Slack - like messaging app (PC, Mac, iOS, Android)</li>
+</ul>
+<h1 id="Nailed_it">Nailed it</h1><p>These guys are less cross-platform and more hybrid. Some target desktop but for the most part are a web &amp; mobile show. They also have little to no drop off in functionality and very little variance in experiences. Chances are if you haven’t used some of them, you’ve heard of most of them</p>
+<h2 id="The_List-1">The List</h2><ul>
+<li><a href="https://twitter.com" target="_blank" rel="external">Twitter</a> - You’ve definitely used it (Web, iOS, Android)</li>
+<li><a href="https://instagram.com/" target="_blank" rel="external">Instagram</a> - You’ve definitely used it (Web, iOS, Android)</li>
+<li><a href="https://www.linkedin.com/" target="_blank" rel="external">Linkedin</a> - You’ve definitely used it (Web, iOS, Android)</li>
+<li><a href="https://www.uber.com/" target="_blank" rel="external">Uber</a> - You’ve definitely heard of it (Web, iOS, Android)</li>
+<li><a href="https://mail.google.com/mail/u/0/" target="_blank" rel="external">Gmail</a> - One of the best email services to date (Web, iOS)</li>
+<li><a href="https://feedly.com" target="_blank" rel="external">Feedly</a> - An extremely popular app for organizing feeds (Web, iOS, Android)</li>
+<li><a href="https://basecamp.com/" target="_blank" rel="external">Basecamp</a> - One of the most popular project management tools (Web, iOS, Android)</li>
+<li><a href="https://untappd.com/" target="_blank" rel="external">Untappd</a> - Drink responsibly (Web, iOS, Android, WP)</li>
+<li><a href="https://vectr.com/" target="_blank" rel="external">Vectr</a> - A free, minimalistic design app (Web, Mac, PC)</li>
+</ul>
+<h1 id="The_Other_Guys">The Other Guys</h1><p>There’s an extensive list here, so I’ll only focus on the ones that I think have some serious value. Apps on this list target 1 platform, but still do it using cross-platform technologies. The fact that some of these guys are backed by heavy hitters should tell you everything you need to know about the future of cross-platform. I’ll keep this one short.</p>
+<h2 id="The_List-2">The List</h2><ul>
+<li><a href="https://atom.io/" target="_blank" rel="external">Atom</a> - Everyone’s favorite new text editor. (Mac, PC, Linux)</li>
+<li><a href="https://code.visualstudio.com/" target="_blank" rel="external">Visual Studio Code</a> - An Atom clone for web dev (Mac, PC, Linux)</li>
+<li><a href="http://www.pixate.com/" target="_blank" rel="external">Pixate</a> - An awesome free app for design and prototyping. (Mac, PC)</li>
+<li><a href="http://brackets.io/" target="_blank" rel="external">Brackets</a> - Yet another Atom clone for web dev (Mac, PC, Linux)</li>
+</ul>
+<h1 id="Closing">Closing</h1><p>From leaders to underdogs, it is evident that there are many software companies that have recognized the benefits of cross-platform application development and dedicated themselves to it as their premiere platform solution. I invite you to explore many of the cross-platform technologies that enable you to do the same!</p>
+<h1 id="Sources">Sources</h1><ul>
+<li><a href="http://electron.atom.io/" target="_blank" rel="external">Electron - Build Cross-Platform Desktop Apps with Web Technologies</a></li>
+<li><a href="https://cordova.apache.org/" target="_blank" rel="external">Apache Cordova - Build Native Mobile Apps with Web Technologies</a></li>
+<li><a href="http://blog.venturepact.com/8-high-performance-apps-you-never-knew-were-hybrid/" target="_blank" rel="external">8 High Performance Apps You Never Knew Were Hybrid</a></li>
+<li><a href="http://kennethormandy.com/journal/your-favourite-app-isnt-native/" target="_blank" rel="external">Your favourite app isn’t native</a></li>
+<li><a href="http://www.slideshare.net/Moovweb/10-most-surprising-hybrid-apps/" target="_blank" rel="external">10 Most Surprising Hybrid Apps</a></li>
+<li><a href="http://www.slideshare.net/iivanoo/these-mobile-apps-will-let-you-totally-rethink-hybrid-app-development/" target="_blank" rel="external">These mobile apps will let you totally rethink hybrid app development</a></li>
+<li><a href="https://blog.nraboy.com/2015/02/ive-gone-hybrid-native-mobile-apps/" target="_blank" rel="external">Why I’ve Gone Hybrid Over Native For Mobile Apps</a></li>
+<li><a href="http://www.appsfreedom.com/native-vs-web-based-vs-hybrid-apps-best/" target="_blank" rel="external">Native vs. Web-Based vs. Hybrid Apps: Which is Best?</a></li>
+<li><a href="https://www.techinasia.com/talk/3-reasons-hybrid-mobile-apps/" target="_blank" rel="external">3 reasons why hybrid mobile apps are the best</a></li>
+</ul>
+
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2015/10/01/hybrid-apps/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2015/10/01/blog-creation/">Creating Your Own Blog Using Hexo</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2015-10-01T15:27:50.000Z">2015-10-01</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">Ryan Edge</a>
+                
+
+              </li>
+            
+            <!-- <li>
+              <span class="heading-span">With: </span>
+               -->
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2015/10/01/blog-creation/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  
+    <div class="post-content-index">
+  
+      
+        <header>
+          <div class="icon"></div>
+            
+    
+      <h1 class="title transition"><a href="/2015/09/30/hello-world/">All Things Web</a></h1>
+    
+  
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="2015-09-30T22:25:00.000Z">2015-09-30</time>
+            </li>
+            
+              <li>
+                <span class="heading-span">By: </span>
+
+                
+                  <a href="/">Ryan Edge</a>
+                
+
+              </li>
+            
+            <!-- <li>
+              <span class="heading-span">With: </span>
+               -->
+          </ul>
+        </header>
+      
+      <div class="entry">
+        
+          
+            <p>Welcome to the Edge of Code! This is my very first post. Since I do an amazing job bombarding people with posts from other sites daily, I decided to go ahead and create my own blog to consolidate and summarize a lot of the things that I share and occasionally add my own flavor of the truth. <br><br>There will be some posts of .NET and Design flavors as well as on general software development. Oh, and there will be JavaScript too. <br><br>Enjoy!</p>
+
+          
+        
+      </div>
+      <footer>
+        
+          <div class="alignright">
+            <a href="/2015/09/30/hello-world/#more" class="more-link">Continue Reading<i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright"><div class="padding">
+	
+	  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:chimon2000.github.io">
+  </form>
+</div>
+	
+	  
+<div class="widget recent-post">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2015/10/01/hybrid-apps/">Don&#39;t Go Hybrid, Go Cross-Platform</a>
+      </li>
+    
+      <li>
+        <a href="/2015/10/01/blog-creation/">Creating Your Own Blog Using Hexo</a>
+      </li>
+    
+      <li>
+        <a href="/2015/09/30/hello-world/">All Things Web</a>
+      </li>
+    
+  </ul>
+</div>
+
+	
+	  
+<div class="widget category">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/software-development/">software development</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+	
+	  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  
+    <a href="/tags/adaptive-ui/">adaptive ui<small>1</small></a>
+  
+    <a href="/tags/cross-platform/">cross-platform<small>1</small></a>
+  
+    <a href="/tags/hybrid/">hybrid<small>1</small></a>
+  
+    <a href="/tags/mobile/">mobile<small>1</small></a>
+  
+    <a href="/tags/web/">web<small>1</small></a>
+  
+</div>
+
+	
+</div></aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="padding">
+	<div class="alignleft">
+	  
+	  &copy; 2015 Ryan Edge
+	  
+	  Powered by <a href="http://hexo.io/" target="_blank">hexo</a>
+	  and Theme by <a href="https://github.com/halfer53/metro-light" target="_blank">metro-light</a>
+	</div>
+
+	<div class="alignright">
+		
+		
+		
+		
+		
+		
+		
+	</div>
+
+	<div class="clearfix"></div>
+</div>
+
+<div class="scroll-top"><i class="fa fa-arrow-circle-up"></i></div>
+</footer>
+  
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+<script type="text/javascript">
+$(window).scroll(function() {
+
+    if($(this).scrollTop() > 400) {
+        $('.scroll-top').fadeIn(200);
+    } else {
+        $('.scroll-top').fadeOut(200);
+    }
+});
+
+$('.scroll-top').bind('click', function(e) {
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0},200);
+});
+</script>
+
+
+</body>
 </html>
